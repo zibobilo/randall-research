@@ -47,7 +47,7 @@ fs.readFile(paths.read, 'ascii',
 
     append('{ "distances" : [')
 
-    for (let i = 0; i < loc.length; i++) {
+    for (let i = 0; i < loc.length-1; i++) {
 
       result.push([])
 
@@ -58,7 +58,7 @@ fs.readFile(paths.read, 'ascii',
 
       append(JSON.stringify(result[i]))
 
-      if(i+1 !== loc.length) append(",")
+      if(i + 1 !== loc.length - 1) append(",")
     }
     append(']}')
 
