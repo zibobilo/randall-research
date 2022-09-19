@@ -5,5 +5,4 @@ import react from "react";
 
 export default defineConfig({
   base: '/randall-research/',
-  plugins: [react()]
 });

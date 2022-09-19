@@ -1,18 +1,7 @@
 {
-  "name": "Research",
+  "name": "research",
   "description": "K-Means algorithm",
   "version": "1.0.0",
-
-  "homepage": "https://github.com/googlemaps/js-samples#readme",
-  "bugs": {
-    "url": "https://github.com/googlemaps/js-samples/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/googlemaps/js-samples.git"
-  },
-  "files": [],
-  "license": "Apache-2.0",
   "scripts": {
     "dev": "vite",
     "start": "vite",

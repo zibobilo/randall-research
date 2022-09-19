@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client";
 import { Wrapper, Status } from "@googlemaps/react-wrapper";
 import { createCustomEqual } from "fast-equals";
 import { isLatLngLiteral } from "@googlemaps/typescript-guards";
+import data from "./components/Data/customerData.json"
 
 const render = (status: Status) => {
   return <h1>{status}</h1>;
@@ -16,7 +17,10 @@ const App: React.VFC = () => {
 
   const onClick = (e: google.maps.MapMouseEvent) => {
     // avoid directly mutating state
-    setClicks([...clicks, e.latLng!]);
+    const positions = data.map(p => new google.maps.LatLng({lat: p.lat, lng: p.lng}))
+    setClicks([...positions]);
+
+
   };
 
   const onIdle = (m: google.maps.Map) => {
@@ -64,7 +68,7 @@ const App: React.VFC = () => {
           setCenter({ ...center, lng: Number(event.target.value) })
         }
       />
-      <h3>{clicks.length === 0 ? "Click on map to add markers" : "Clicks"}</h3>
+      <h3>{clicks.length === 0 ? "Click on map to add markers" : "Customers"}</h3>
       {clicks.map((latLng, i) => (
         <pre key={i}>{JSON.stringify(latLng.toJSON(), null, 2)}</pre>
       ))}
