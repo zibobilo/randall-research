@@ -14,7 +14,7 @@
     "typescript": "^4.6.4",
     "vite": "^2.9.9"
   },
-  "private": true,
+  "private": false,
   "dependencies": {
     "@googlemaps/react-wrapper": "^1.1.33",
     "@googlemaps/typescript-guards": "^1.0.16",
