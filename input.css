@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+@layer components {
+    .btn-yellow {
+      @apply inline-block m-2 px-6 py-2 border-2 border-yellow-500 text-yellow-500 font-medium text-xs leading-tight uppercase rounded hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out;
+    }
+  
+    .btn-green {
+      @apply inline-block m-2 px-6 py-2 border-2 border-green-500 text-green-500 font-medium text-xs leading-tight uppercase rounded hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out;
+    }
+  }
